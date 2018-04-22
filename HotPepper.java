@@ -7,10 +7,11 @@ public class HotPepper implements iPizza{
 		
 	}
 	
-	HotPepper(iPizza ipizza){
+	HotPepper(iPizza ipizza, boolean isUsed){
+		if(isUsed) {
 		price += ipizza.getPrice();
 		title = ipizza.getTitle() + title;
-		
+		}
 	}
 	
 	public int getPrice() {

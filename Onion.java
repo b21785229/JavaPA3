@@ -8,9 +8,11 @@ public class Onion implements iPizza {
 		
 	}
 	
-	Onion(iPizza ipizza){
+	Onion(iPizza ipizza, boolean isUsed){
+		if(isUsed) {
 		price += ipizza.getPrice();
 		title = ipizza.getTitle() + title;
+		}
 	}
 	
 	public int getPrice() {

@@ -6,9 +6,11 @@ public class Soudjouk implements iPizza{
 	Soudjouk(){
 	}
 	
-	Soudjouk(iPizza ipizza){
+	Soudjouk(iPizza ipizza, boolean isUsed){
+		if(isUsed) {
 		price += ipizza.getPrice();
 		title = ipizza.getTitle() + title;
+		}
 	}
 	
 	public int getPrice() {

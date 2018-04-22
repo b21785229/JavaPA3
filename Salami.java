@@ -9,9 +9,11 @@ public class Salami implements iPizza{
 		
 	}
 	
-	Salami(iPizza ipizza){
+	Salami(iPizza ipizza, boolean isUsed){
+		if(isUsed) {
 		price += ipizza.getPrice();
 		title = ipizza.getTitle() + title;
+		}
 	}
 	
 	public int getPrice() {

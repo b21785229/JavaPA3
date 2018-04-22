@@ -14,7 +14,7 @@ public class Main {
 		mng.addCustomer(neco);
 		System.out.println(mng.getAllCustomers().get(0).getCustomerID());
 		
-		demoPizza.addTopping(new Salami(new HotPepper(new Soudjouk(new Onion()))));
+		demoPizza.addTopping(new Salami(new Soudjouk(new Onion(new HotPepper(), true), true), true), false);
 		o.addPizza(demoPizza);
 		ord.addOrder(o);
 		ord.getAllOrders().get(0).pizzas.get(0).printToppings();

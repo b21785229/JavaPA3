@@ -12,9 +12,12 @@ public class Pizza{
 			title = "NeapolitanPan pizza\n";
 			price = 10;}	
 	}
-	public void addTopping(iPizza decoredPizza) {
+	public void addTopping(iPizza decoredPizza, boolean isUsed){
+		if(isUsed) {
 		price += decoredPizza.getPrice();
-		title += decoredPizza.getTitle();
+		title = decoredPizza.getTitle() + title;
+		}
+	
 		return;
 	}
 	public int cost() {
