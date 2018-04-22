@@ -2,7 +2,6 @@
 public class Pizza{
 	public int price;
 	public String title;
-	
 	public Pizza(int pan){
 		if(pan == 1) {
 			title = "AmericanPan pizza\n";
@@ -15,10 +14,9 @@ public class Pizza{
 	public void addTopping(iPizza decoredPizza, boolean isUsed){
 		if(isUsed) {
 		price += decoredPizza.getPrice();
-		title = decoredPizza.getTitle() + title;
+		title += decoredPizza.getTitle();
 		}
-	
-		return;
+
 	}
 	public int cost() {
 		return price;
@@ -28,4 +26,5 @@ public class Pizza{
 		System.out.println(title  +" price: " + cost() + "$\n");
 		return;
 		}
+	
 }

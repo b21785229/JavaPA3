@@ -5,12 +5,8 @@ public class ManageCustomers implements CustomerDAO{
 	ArrayList<Customer> customerList = new ArrayList<Customer>();
 	
 	public Customer createCustomer(int ID, String Name, String Address, String Phone) {
-		Customer newCustomer = new Customer();
-		newCustomer.setCustomerID(ID);
-		newCustomer.setCustomerName(Name);
-		newCustomer.setCustomerAddress(Address);
-		newCustomer.setCustomerPhone(Phone);
-		return newCustomer;
+		return new Customer(ID, Name, Address, Phone);
+		
 		
 	}
 	

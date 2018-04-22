@@ -5,6 +5,13 @@ public class Customer {
 	private String customerPhone;
 	
 	
+	public Customer(int customerID, String customerName, String customerAddress, String customerPhone) {
+		super();
+		this.customerID = customerID;
+		this.customerName = customerName;
+		this.customerAddress = customerAddress;
+		this.customerPhone = customerPhone;
+	}
 	public int getCustomerID() {
 		return customerID;
 	}

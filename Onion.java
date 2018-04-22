@@ -2,17 +2,23 @@ public class Onion implements iPizza {
 
 	public int price = 2;
 	public String title = " Onion added\n";
-	
-	
+	//public boolean isUsed = false;
+
 	Onion(){
 		
 	}
 	
 	Onion(iPizza ipizza, boolean isUsed){
+		//this.isUsed = isUsed;
 		if(isUsed) {
 		price += ipizza.getPrice();
 		title = ipizza.getTitle() + title;
 		}
+		else {
+			price = ipizza.getPrice();
+			title = ipizza.getTitle();
+		}
+		
 	}
 	
 	public int getPrice() {
@@ -22,5 +28,6 @@ public class Onion implements iPizza {
 	public String getTitle() {
 		return title;
 	}
+	
 	
 }

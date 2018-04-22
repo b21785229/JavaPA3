@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class ManageOrders implements OrderDAO{
-	
 	ArrayList<Order> orderList = new ArrayList<Order>();
+	
 	public Order createOrder(int orderID, int customerID) {
 		Order newOrder = new Order();
 		newOrder.setOrderID(orderID);
