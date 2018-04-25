@@ -12,7 +12,7 @@ public void processfile() {
 		System.out.println("//////////");
 		}
 	Pizza pizza = new Pizza(1);
-	pizza.addTopping(new Salami(new Soudjouk(new HotPepper(new Onion(), true), biber), sucuk), true);
+	pizza.addTopping(new Salami(new Soudjouk(new HotPepper(new Onion()))));
 	pizza.printToppings();
 }
 }

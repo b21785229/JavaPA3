@@ -1,5 +1,5 @@
 
-public interface iPizza {
+public interface InterfaceTopping {
 	
 	public int getPrice();
 	public String getTitle();

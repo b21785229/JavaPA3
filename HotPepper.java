@@ -1,30 +1,19 @@
 
-public class HotPepper implements iPizza{
+public class HotPepper implements InterfaceTopping{
 
-	public int price;
-	String title;
+	public int price = 1;
+	String title = " Hot Pepper added\n";
 	//public boolean isUsed = false;
-	HotPepper(boolean isUsed){
-		if(isUsed) {
-			price = 1;
-			title = " Hot Pepper added\n";
-		}
-		else {
-			price = 0;
-			title = "";
-		}
+	HotPepper(){
+		
+
+
 	}
 	
-	HotPepper(iPizza ipizza, boolean isUsed){
-		//this.isUsed = isUsed;
-		if(isUsed) {
+	HotPepper(InterfaceTopping ipizza){
+	
 		price += ipizza.getPrice();
 		title = ipizza.getTitle() + title;
-		}
-		else {
-			price = ipizza.getPrice();
-			title = ipizza.getTitle();
-		}
 	
 	}
 	

@@ -1,4 +1,4 @@
-public class Onion implements iPizza {
+public class Onion implements InterfaceTopping {
 
 	public int price = 2;
 	public String title = " Onion added\n";
@@ -8,7 +8,7 @@ public class Onion implements iPizza {
 		
 	}
 	
-	Onion(iPizza ipizza, boolean isUsed){
+	Onion(InterfaceTopping ipizza, boolean isUsed){
 		//this.isUsed = isUsed;
 		if(isUsed) {
 		price += ipizza.getPrice();

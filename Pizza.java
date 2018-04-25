@@ -11,19 +11,16 @@ public class Pizza{
 			title = "NeapolitanPan pizza\n";
 			price = 10;}	
 	}
-	public void addTopping(iPizza decoredPizza, boolean isUsed){
-		if(isUsed) {
+	public void addTopping(InterfaceTopping decoredPizza){
 		price += decoredPizza.getPrice();
 		title += decoredPizza.getTitle();
-		}
-
 	}
 	public int cost() {
 		return price;
 		}
 	
 	public void printToppings() {
-		System.out.println(title  +" price: " + cost() + "$\n");
+		System.out.println(title  +" price: $" + cost() + "\n");
 		return;
 		}
 	
