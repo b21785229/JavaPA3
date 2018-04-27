@@ -1,27 +1,26 @@
 
-public class HotPepper implements InterfaceTopping{
+public class HotPepper implements InterfaceTopping {
 
 	public int price = 1;
 	String title = " Hot Pepper";
 
-	HotPepper(){
+	HotPepper() {
 
 	}
-	
-	HotPepper(InterfaceTopping ipizza){
-	
+
+	HotPepper(InterfaceTopping ipizza) {
+
 		price += ipizza.getPrice();
 		title = ipizza.getTitle() + title;
-	
+
 	}
-	
+
 	public int getPrice() {
 		return price;
 	}
-	
+
 	public String getTitle() {
 		return title;
 	}
-	
-	
+
 }

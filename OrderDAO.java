@@ -5,5 +5,6 @@ public interface OrderDAO {
 	public void addOrder(Order order);
 	public void deleteOrder(int i);
 	public ArrayList<Order> getAllOrders();
+	public void removeByCustomer(String ID);
 	
 }
