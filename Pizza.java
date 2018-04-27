@@ -4,11 +4,11 @@ public class Pizza{
 	public String title;
 	public Pizza(int pan){
 		if(pan == 1) {
-			title = "AmericanPan pizza\n";
+			title = "AmericanPan";
 			price = 5;}
 		
 		if(pan == 2){
-			title = "NeapolitanPan pizza\n";
+			title = "NeapolitanPan";
 			price = 10;}	
 	}
 	public void addTopping(InterfaceTopping decoredPizza){
@@ -20,7 +20,7 @@ public class Pizza{
 		}
 	
 	public void printToppings() {
-		System.out.println(title  +" price: $" + cost() + "\n");
+		System.out.println("\t" + title + " $" + cost());
 		return;
 		}
 	

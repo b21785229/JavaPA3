@@ -1,21 +1,24 @@
 public class Customer {
-	private int customerID;
+	private String customerID;
 	private String customerName;
 	private String customerAddress;
 	private String customerPhone;
 	
+	Customer(){
+		
+	}
 	
-	public Customer(int customerID, String customerName, String customerAddress, String customerPhone) {
+	Customer(String customerID, String customerName, String customerPhone, String customerAddress) {
 		super();
 		this.customerID = customerID;
 		this.customerName = customerName;
 		this.customerAddress = customerAddress;
 		this.customerPhone = customerPhone;
 	}
-	public int getCustomerID() {
+	public String getCustomerID() {
 		return customerID;
 	}
-	public void setCustomerID(int customerID) {
+	public void setCustomerID(String customerID) {
 		this.customerID = customerID;
 	}
 	
@@ -38,6 +41,10 @@ public class Customer {
 	}
 	public void setCustomerPhone(String customerPhone) {
 		this.customerPhone = customerPhone;
+	}
+	
+	public void printCustomer() {
+		System.out.println(customerID + customerName + customerPhone);
 	}
 	
 	

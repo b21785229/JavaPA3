@@ -1,30 +1,40 @@
 import java.util.*;
 public class Order {
 
-	private int orderID;
-	private int orderCustomer;
+	private String orderID;
+	private String orderCustomer;
 	private double checkSum = 0;
 	private int drinks = 0;
-	ArrayList<Pizza> pizzas = new ArrayList<Pizza>();
+	public ArrayList<Pizza> pizzas = new ArrayList<Pizza>();
+	Order(){
+		
+	}
+	Order(String id, String customerID){
+		orderID = id;
+		orderCustomer = customerID;
+	}
 	
-	
-	public int getOrderID() {
+	public String getOrderID() {
 		return orderID;
 	}
-	public void setOrderID(int orderID) {
+	public void setOrderID(String orderID) {
 		this.orderID = orderID;
 	}
-	public int getOrderCustomer() {
+	public String getOrderCustomer() {
 		return orderCustomer;
 	}
-	public void setOrderCustomer(int orderCustomer) {
+	public void setOrderCustomer(String orderCustomer) {
 		this.orderCustomer = orderCustomer;
 	}
 	public void addPizza(Pizza newPizza) {
 		pizzas.add(newPizza);
 	}
 	public double getPrice() {
-		return checkSum;
+		for(Pizza p : pizzas) {
+			checkSum += p.price;
+		}
+		
+		return checkSum + drinks;
 	}
 	public int getDrinks() {
 		return drinks;
@@ -32,8 +42,6 @@ public class Order {
 	public void addDrink() {
 		drinks++;
 	}
-	public void calculateCheckSum(double price) {
-		checkSum += price;
-	}
+	
 	
 }

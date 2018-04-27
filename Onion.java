@@ -1,23 +1,17 @@
 public class Onion implements InterfaceTopping {
 
 	public int price = 2;
-	public String title = " Onion added\n";
-	//public boolean isUsed = false;
+	public String title = " Onion";
 
 	Onion(){
 		
 	}
 	
-	Onion(InterfaceTopping ipizza, boolean isUsed){
-		//this.isUsed = isUsed;
-		if(isUsed) {
+	Onion(InterfaceTopping ipizza){
+
 		price += ipizza.getPrice();
 		title = ipizza.getTitle() + title;
-		}
-		else {
-			price = ipizza.getPrice();
-			title = ipizza.getTitle();
-		}
+
 		
 	}
 	

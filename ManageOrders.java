@@ -3,7 +3,7 @@ import java.util.*;
 public class ManageOrders implements OrderDAO{
 	ArrayList<Order> orderList = new ArrayList<Order>();
 	
-	public Order createOrder(int orderID, int customerID) {
+	public Order createOrder(String orderID, String customerID) {
 		Order newOrder = new Order();
 		newOrder.setOrderID(orderID);
 		newOrder.setOrderCustomer(customerID);
@@ -21,5 +21,13 @@ public class ManageOrders implements OrderDAO{
 	public ArrayList<Order> getAllOrders(){
 		return orderList;
 	}
-	
+	public Order getById(String ID) {
+		Order ord = new Order();
+		for(Order o: orderList) {
+			if(o.getOrderID().equals(ID)) {
+				ord = o;
+			}
+		}
+		return ord;
+	}	
 }

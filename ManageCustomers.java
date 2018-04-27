@@ -3,8 +3,8 @@ import java.util.*;
 public class ManageCustomers implements CustomerDAO{
 	
 	ArrayList<Customer> customerList = new ArrayList<Customer>();
-	
-	public Customer createCustomer(int ID, String Name, String Address, String Phone) {
+	ArrayList<String> sortedNames = new ArrayList<String>();
+	public Customer createCustomer(String ID, String Name, String Address, String Phone) {
 		return new Customer(ID, Name, Address, Phone);
 		
 		
@@ -26,4 +26,30 @@ public class ManageCustomers implements CustomerDAO{
 		return customerList;
 	}
 	
+	public Customer getById(String ID) {
+		Customer cust = new Customer();
+		for(Customer c: customerList) {
+			if(c.getCustomerID().equals(ID)) {
+				cust = c;
+			}
+		}
+		return cust;
+	}
+	
+	public Customer getByName(String name) {
+		Customer cust = new Customer();
+		for(Customer c: customerList) {
+			if(c.getCustomerID().equals(name)) {
+				cust = c;
+			}
+		}
+		return cust;
+	}
+	
+	public void sortByName(){
+		for(Customer c: customerList) {
+			sortedNames.add(c.getCustomerName());
+			
+		}  
+	}
 }

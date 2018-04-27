@@ -2,10 +2,11 @@
 public class Soudjouk implements InterfaceTopping{
 	
 	public int price = 3;
-	String title = " Soudjouk added\n";
+	String title = " Soudjouk";
 	//public boolean isUsed = false;
 
 	Soudjouk(){
+		
 		
 	}
 	

@@ -2,11 +2,9 @@
 public class HotPepper implements InterfaceTopping{
 
 	public int price = 1;
-	String title = " Hot Pepper added\n";
-	//public boolean isUsed = false;
-	HotPepper(){
-		
+	String title = " Hot Pepper";
 
+	HotPepper(){
 
 	}
 	

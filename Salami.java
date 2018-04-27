@@ -2,7 +2,7 @@
 public class Salami implements InterfaceTopping{
 
 	public int price = 3;
-	public String title = " Salami added\n";
+	public String title = " Salami";
 	//public boolean isUsed = false;
 	
 	Salami(){
@@ -15,17 +15,7 @@ public class Salami implements InterfaceTopping{
 
 	}
 	
-	Salami(InterfaceTopping ipizza, boolean isUsed){
-		//this.isUsed = isUsed;
-		if(isUsed) {
-		price += ipizza.getPrice();
-		title = ipizza.getTitle() + title;
-		}
-		else {
-			price = ipizza.getPrice();
-			title = ipizza.getTitle();
-		}
-	}
+
 	
 	public int getPrice() {
 		return price;
